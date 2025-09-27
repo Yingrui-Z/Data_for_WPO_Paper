@@ -1,0 +1,14 @@
+Parameters of Shared Information Learning Layer: the structure and parameters of this layer can be adjusted for specific problem. 
+For spatio-temporal prediction tasks, we adopt the STGCN model with the following settings:
+Number of nodes - 10,
+Dropout probability - 0.1,
+Spatial convolution kernel size - ks = 3,
+Temporal convolution kernel size - kt = 3,
+Batch size - 64,
+Training epochs - 60,
+Initial learning rate - 8e-4.
+
+Parameters of Task-specific learning Layer: task-specific layers are constructed by stacking MLP blocks. 
+Each MLP block consists of a fully connected layer, a batch normalization layer, and a ReLU activation function. 
+The number of MLP blocks and the number of neurons in each layer can be adjusted. 
+In our case study, we set the depth of the MLP blocks as 1.
